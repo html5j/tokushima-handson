@@ -1,4 +1,18 @@
 徳島ハンズオン
 =================
 
-Technology & Entrepreneurship TOKUSHIMA 第4回（http://fin.der.jp/tet4/）のハンズオン用レポジトリ
+Technology & Entrepreneurship TOKUSHIMA 第4回（ http://fin.der.jp/tet4/ ）のハンズオン用レポジトリ
+
+videoからスナップ写真を作り、フレームをつけたりスタンプアイコンなど画像加工するWebアプリをハンズ・オンする
+
+学習する項目
+
+* videoタグの使い方
+** コントローラーの出し方
+* videoタグから画像（canvas）への落とし方
+* canvasへの画像加工の仕方
+** 枠線をつける
+** フレーム画像を貼ってみる
+* 画像加工応用
+** マウスで位置を決めて、好きな位置にスタンプアイコンを貼り付ける
+* 最終画像のjpegへの画像ファイルへの変換の仕方
