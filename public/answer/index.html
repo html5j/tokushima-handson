@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>video snap sample</title>
+    <script src="/files/js/jquery-1.10.2.min.js"></script>
+  </head>
+  <body>
+    <h1>Video snap sample</h1>
+
+    <!-- video 表示 -->
+    <div>
+      <video width="640" height="360" src="/files/video/bunny.mp4" controls>
+    </div>
+
+    <!-- スナップショットボタン -->
+    <p>
+      <button id="snap-button">スナップ!!</button>
+      <button id="waku-button">枠線を描く</button>
+      <button id="fancy-waku-button">おしゃれな枠線を描く</button>
+    </p>
+
+    <!-- スナップ 表示 -->
+    <div>
+      <canvas width="640" height="360">
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
