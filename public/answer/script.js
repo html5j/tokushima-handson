@@ -21,7 +21,14 @@ $("#waku-button").on("click", draw_waku)
 // 枠線を描く
 function draw_waku() {
 	context.beginPath(); // 描画を開始する
-	context.strokeStyle
+
+	// 
+	context.strokeStyle = "rgb(255,255,255)"
+	context.lineWidth = 25;
+	context.strokeRect(0, 0, 640, 360)
+
+	context.strokeStyle = "rgb(0,0,0)"
+	context.lineWidth = 1;
 	context.strokeRect(0, 0, 640, 360)
 }
 
