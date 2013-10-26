@@ -12,7 +12,7 @@ $("#snap-button").on("click", snap_picture);
 // スナップ写真を撮る
 function snap_picture() {
   // ビデオのスナップショットをキャンバスに貼る
-  context.drawImage($("video")[0], 0, 0);
+  /* ここにコードを記述 */
 }
 
 
@@ -23,10 +23,17 @@ $("#waku-button").on("click", draw_waku);
 
 // 枠線を描く関数
 function draw_waku() {
-  context.beginPath(); // 描画を開始する
-  context.strokeStyle = "yellow"; // 枠線の色を黄色に指定
-  context.lineWidth = 25; // 枠線の太さを 25 pixelにする
-  context.strokeRect(0, 0, canvasElem.width, canvasElem.height); // 枠線を描く
+  // 描画を開始する
+  /* ここにコードを記述 */
+  
+  // 枠線の色を黄色に指定
+  /* ここにコードを記述 */
+
+  // 枠線の太さを 25 pixelにする
+  /* ここにコードを記述 */
+
+  // 枠線を描く
+  /* ここにコードを記述 */
 }
 
 /* STEP3 */
@@ -38,14 +45,11 @@ $("#fancy-waku-button").on("click", draw_waku_fancy);
 function draw_waku_fancy() {
   // Imageオブジェクトを作り、srcに画像ファイルを指定する
   // （画像のダウンロードが始まる）
-  var img = new Image();
-  img.src = "../files/img/frame_gold.png";
+  /* ここにコードを記述 */
 
   // 画像ダウンロードが完了すると load イベントが発火するので
   // このタイミングで描画する
-  img.onload = function(){
-    context.drawImage(img, 0, 0, canvasElem.width, canvasElem.height);
-  };
+  /* ここにコードを記述 */
 
 }
 
@@ -60,15 +64,13 @@ $("#download").on("click", create_download_link);
 // 画像を DataURL に変換し、アンカー要素のhref属性にセットすると、
 // ダウンロード出来るようになる
 function create_download_link(){
-  var url = canvasElem.toDataURL(); // キャンバス画像を DataURLに変換
-  console.log(url); // DataURLが、どんなものかを知るため consoleに表示
+  // キャンバス画像を DataURLに変換
+  /* ここにコードを記述 */
 
   // アンカー要素のhref属性にDataURLを指定し、
   // download属性にファイル名を指定する
-  $("#download-link").attr({
-    href: url,
-    download: "picture.png"
-  });
+  /* ここにコードを記述 */
+
 }
 
 /* STEP5 (APPENDIX) */
@@ -87,15 +89,14 @@ function start_capture(){
 
   // カメラからの映像ストリーム取得を要求する。成功すると、
   // 第二引数のコールバック関数が呼ばれる
-  navigator.webkitGetUserMedia({video: true}, function(stream){
-    // 映像ストリームオブジェクトからBlobURLを生成する。
-    var bloburl =  window.URL.createObjectURL(stream);
-    // BlobURLが何なのかを確認するため、consoleに表示する
-    console.log(bloburl);
+  /* ここにコードを記述 */
 
-    // video要素のsrc属性に生成した BlobURL をセットすると
-    // カメラ映像が表示されるようになる。
-    video.src = bloburl;
+  // 映像ストリームオブジェクトからBlobURLを生成する。
+  /* ここにコードを記述 */
+
+  // video要素のsrc属性に生成した BlobURL をセットすると
+  // カメラ映像が表示されるようになる。
+  /* ここにコードを記述 */
   });
 }
 
