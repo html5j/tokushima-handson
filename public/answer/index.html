@@ -9,8 +9,16 @@
     <h1>Video snap sample</h1>
 
     <!-- video 表示 -->
+    <!-- 
+      更に余力 2)
+      mpeg4が視聴できないブラウザに対応するため、source要素で
+    　　webm ファイルを指定する
+    -->
     <div>
-      <video src="../files/video/bunny.mp4" controls></video>
+      <video controls>
+        <source src="../files/video/bunny.webm" type='video/webm'>
+        <source src="../files/video/bunny.mp4" type='video/mp4'>
+      </video>
     </div>
 
     <!-- スナップショットボタン -->

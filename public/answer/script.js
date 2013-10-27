@@ -12,6 +12,14 @@ $("#snap-button").on("click", snap_picture);
 // スナップ写真を撮る
 function snap_picture() {
   // ビデオのスナップショットをキャンバスに貼る
+
+  // さらに余力 1)
+  // WebCamにすると、映像サイズが変わるので、canvasの大きさも
+  // それに合わせて変える
+  var $video = $("video")[0]; // video 要素
+  canvasElem.width = $video.videoWidth;
+  canvasElem.height = $video.videoHeight;
+
   context.drawImage($("video")[0], 0, 0);
 }
 
@@ -85,17 +93,28 @@ $("#webcam").on("click", start_capture);
 function start_capture(){
   var video = $('video')[0]; // video要素の取得
 
+  // さらに余力 2)
+  // getUserMedia の crossブラウザ対応
+  navigator.getUserMedia = navigator.getUserMedia ||
+    navigator.mozGetUserMedia ||
+    navigator.webkitGetUserMedia;
+
   // カメラからの映像ストリーム取得を要求する。成功すると、
   // 第二引数のコールバック関数が呼ばれる
-  navigator.webkitGetUserMedia({video: true}, function(stream){
+  navigator.getUserMedia({video: true}, function(stream){
     // 映像ストリームオブジェクトからBlobURLを生成する。
     var bloburl =  window.URL.createObjectURL(stream);
     // BlobURLが何なのかを確認するため、consoleに表示する
-    console.log(bloburl);
 
     // video要素のsrc属性に生成した BlobURL をセットすると
     // カメラ映像が表示されるようになる。
     video.src = bloburl;
+
+    // 余力がある方向けの解法
+    // ビデオを自動再生する。
+    video.play();
+  }, function(error){
+    console.log(error);
   });
 }
 
