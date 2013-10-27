@@ -97,7 +97,6 @@ function start_capture(){
   // video要素のsrc属性に生成した BlobURL をセットすると
   // カメラ映像が表示されるようになる。
   /* ここにコードを記述 */
-  });
 }
 
 
